@@ -1,0 +1,465 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500;
+  src: url("../fonts/plusjakartasans-medium-webfont.woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../fonts/plusjakartasans-lightitalic-webfont.woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 300;
+  src: url("../fonts/plusjakartasans-light-webfont.woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 400;
+  src: url("../fonts/plusjakartasans-regular-webfont.woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  src: url("../fonts/plusjakartasans-semibold-webfont.woff2");
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  src: url("../fonts/plusjakartasans-bold-webfont.woff2");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: 0.5rem;
+  scrollbar-color: #ee661a transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ee661a;
+  border-radius: 1.25rem;
+  border: 0rem solid #ffffff;
+}
+
+*::-moz-selection {
+  background: rgba(238, 102, 26, 0.2);
+}
+
+*::selection {
+  background: rgba(238, 102, 26, 0.2);
+}
+
+*::-moz-selection {
+  background: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+  background: #2f2f2f;
+  color: #fff;
+  font-family: "Plus Jakarta Sans";
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 0;
+}
+body > .wrapper {
+  overflow-x: hidden !important;
+}
+
+section:not(#hero) {
+  position: relative;
+  padding-inline: clamp(2rem, 3vw, 8rem);
+  margin-bottom: clamp(12rem, 5vw, 18rem);
+  min-height: 100vh;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover, a:focus-within,
+a:visited:hover,
+a:visited:focus-within {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 10vw, 8rem);
+  line-height: 10.0625rem;
+  transition: letter-spacing 0.5s ease;
+  margin-bottom: clamp(0rem, 5vw, 9rem);
+  cursor: default;
+}
+@media (min-width: 500px) {
+  h1:hover, h1:focus-within {
+    letter-spacing: 0.12em;
+  }
+}
+
+h2 {
+  font-size: clamp(2.25rem, 10vw, 6rem);
+  line-height: 7.5625rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  line-height: 3.75rem;
+}
+
+h4 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  line-height: 2.8125rem;
+}
+
+h5 {
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  line-height: 1.875rem;
+}
+
+h6 {
+  font-size: clamp(0.5rem, 3.5vw, 1rem);
+  line-height: 1.1875rem;
+}
+
+p {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  text-align: center;
+  line-height: 2.8125rem;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(0%);
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  width: 100vw;
+  height: 8rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding-inline: clamp(2rem, 3vw, 8rem);
+  transition: transform 0.25s ease;
+}
+#navbar img {
+  cursor: pointer;
+  width: clamp(12rem, 50vw, 16rem);
+}
+#navbar .nav-container {
+  display: flex;
+  gap: 2rem;
+}
+#navbar button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  width: 18.75rem;
+  height: 4rem;
+  text-align: center;
+  background: #2f2f2f;
+  border-radius: 500rem;
+  transition: background 0.25s ease;
+}
+#navbar button:focus-within, #navbar button:hover {
+  background: #ee661a;
+  outline: none;
+}
+#navbar button a {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+#navbar .hamburger-menu-btn {
+  display: none;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 2.25rem;
+  width: 2.5rem;
+  padding: 0;
+}
+#navbar .hamburger-menu-btn > span {
+  position: absolute;
+  display: block;
+  height: 0.33rem;
+  width: 2.5rem;
+  border-radius: 500rem;
+  transform-origin: 0;
+  transition: all 0.33s;
+  background: #fff;
+}
+#navbar .hamburger-menu-btn > span:first-child {
+  top: 0;
+}
+#navbar .hamburger-menu-btn > span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#navbar .hamburger-menu-btn > span:last-child {
+  bottom: 0;
+}
+#navbar .hamburger-menu-btn.active > span:nth-child(2) {
+  inset: 50%;
+  transform: translate(-56%, -50%);
+  rotate: 45deg;
+}
+#navbar .hamburger-menu-btn.active > span:first-child, #navbar .hamburger-menu-btn.active > span:last-child {
+  inset: 50%;
+  transform: translate(-44%, -50%);
+  rotate: -45deg;
+}
+@media (max-width: 1500px) {
+  #navbar .nav-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    gap: 0;
+    transition: transform 0.75s cubic-bezier(0.21, 0.93, 0.64, 0.98);
+  }
+  #navbar .nav-container button {
+    background: none;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 0;
+  }
+  #navbar .nav-container button a {
+    border-radius: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), #ee661a);
+    outline: #ee661a 0.125rem solid;
+    color: #ee661a;
+    padding-block: 1rem;
+    width: clamp(17.5rem, 50vw, 27.5rem);
+    text-align: right;
+    padding-right: clamp(2rem, 3vw, 8rem);
+    transition: background-size 0.25s, color 0.25s;
+    background-size: 800% 800%;
+  }
+  #navbar .nav-container button a:hover, #navbar .nav-container button a:focus-within {
+    background-size: 100% 100%;
+    color: #fff;
+  }
+  #navbar .nav-container:not(.active) {
+    transform: translateX(200%);
+  }
+  #navbar .nav-container.active {
+    transform: translateX(0);
+  }
+  #navbar .hamburger-menu-btn {
+    display: block;
+  }
+}
+
+.navbar-trigger {
+  background: transparent;
+  width: 100vw;
+  height: 8rem;
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+}
+
+.navbar-trigger:hover #navbar {
+  transform: translateY(0%) !important;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  margin: clamp(2rem, 3vw, 8rem);
+  background: #252525;
+  border-radius: 500rem;
+  cursor: pointer;
+}
+.scroll-top-btn > img {
+  filter: saturate(0%) brightness(200%);
+  transition: filter 0.25s ease;
+}
+.scroll-top-btn:hover > img {
+  filter: saturate(100%) brightness(100%);
+}
+
+.loading {
+  inset: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #252525;
+  z-index: 200;
+  opacity: 0;
+  animation: 3s opacityNull ease;
+}
+@keyframes opacityNull {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loading > .container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.loading > .container .car {
+  width: clamp(8rem, 40vw, 16rem);
+  position: absolute;
+  top: 50%;
+  animation: riding 2s cubic-bezier(0.2, 0.73, 0.7, 0.16);
+  animation-delay: 500ms;
+  left: 100%;
+  transform: translateX(100%) translateY(-110%);
+}
+@keyframes riding {
+  0% {
+    left: 0;
+    transform: translateX(-100%) translateY(-110%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(100%) translateY(-110%);
+  }
+}
+.loading > .container .progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(2.5rem);
+  background: #fff;
+  width: 25vw;
+  height: 0.25rem;
+  border-radius: 500rem;
+  margin-inline: auto;
+}
+@media (max-width: 750px) {
+  .loading > .container .progress {
+    width: 50vw;
+  }
+}
+.loading > .container .progress .percent-done {
+  transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+  -moz-transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+  -webkit-transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+  background: #ee661a;
+  height: 100%;
+  width: 0%;
+}
+
+footer {
+  position: relative;
+  min-height: 32rem;
+  border: 6px solid;
+  -o-border-image: linear-gradient(#ee661a, rgba(238, 102, 26, 0.75)) 27;
+     border-image: linear-gradient(#ee661a, rgba(238, 102, 26, 0.75)) 27;
+  background: #252525;
+}
+footer .gradient {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+  transform: rotate(-180deg);
+  height: 100%;
+}
+footer img {
+  width: clamp(12rem, 50vw, 16rem);
+  position: absolute;
+  margin-inline: clamp(2rem, 3vw, 8rem);
+  margin-block: 1rem;
+  cursor: pointer;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+footer .container .links {
+  margin-inline: 5rem;
+}
+footer .container .links a {
+  display: block;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  margin-block: 0.5rem;
+  transition: letter-spacing 0.5s ease;
+}
+footer .container .links a:hover,
+footer .container .links a:focus-within {
+  color: #ee661a;
+  letter-spacing: 0.09em;
+}
+footer .container .separator {
+  display: block;
+  background-color: #fff;
+  height: 16rem;
+  width: 0.25rem;
+}
+footer .disclaimer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-inline: clamp(2rem, 3vw, 8rem);
+  margin-block: 1rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+footer .disclaimer h6 {
+  font-weight: 400;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container .links a {
+    text-align: center;
+    margin-block: 0;
+  }
+  footer .container .separator {
+    margin-block: 0.5rem;
+    height: 0.25rem;
+    width: 50vw;
+  }
+}/*# sourceMappingURL=global.css.map */

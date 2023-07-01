@@ -1,0 +1,343 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding: 2rem;
+}
+body > .wrapper > .back-btn {
+  cursor: pointer;
+  width: 4rem;
+  aspect-ratio: 1/1;
+  background: #252525;
+  border-radius: 500rem;
+  border: transparent 0.25rem solid;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  background-image: url("../img/arrow-left.svg");
+  background-position: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  z-index: 210;
+  transition: background-color 0.25s ease, border 0.25s ease, opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+body > .wrapper > .back-btn:hover, body > .wrapper > .back-btn:focus-within {
+  background-color: #ee661a;
+  border: #fff 0.25rem solid;
+}
+body > .wrapper > .bg-img {
+  position: absolute;
+  z-index: -1;
+}
+@media (max-width: 850px) {
+  body > .wrapper > .bg-img.figures {
+    display: none !important;
+  }
+  body > .wrapper > .bg-img.blob {
+    height: 25vh;
+    width: 25vh;
+  }
+}
+body > .wrapper > .bg-img.figures {
+  width: calc(100vw - 8rem);
+  height: calc(100vh - 8rem);
+  inset: 50%;
+  transform: translate(-50%, -50%);
+}
+body > .wrapper > .bg-img.figures > path:nth-child(1) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 100ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(2) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 200ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(3) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 300ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(4) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 400ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(5) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 500ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(6) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 600ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(7) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 700ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(8) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 800ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(9) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 900ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(10) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1000ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(11) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1100ms;
+}
+body > .wrapper > .bg-img.figures > path:nth-child(12) {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 1200ms;
+}
+@keyframes float {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(-0.5rem);
+  }
+}
+body > .wrapper > .bg-img.blob-1, body > .wrapper > .bg-img.blob-2 {
+  top: 0;
+  right: 0;
+}
+body > .wrapper > .bg-img.blob-3, body > .wrapper > .bg-img.blob-4 {
+  bottom: 0;
+  left: 0;
+}
+
+.form {
+  border-radius: 2.25rem;
+  width: min(50vw, 50rem);
+  margin-inline: auto;
+  padding: 2rem clamp(2rem, 5vw, 8rem) 4rem;
+  background: linear-gradient(rgb(37, 37, 37), rgba(37, 37, 37, 0.75));
+  box-shadow: inset 0 0 4rem rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0.25rem 2rem rgba(0, 0, 0, 0.25));
+}
+@media (max-width: 850px) {
+  .form > h3 {
+    margin-top: 1.5rem !important;
+  }
+  .form > .container {
+    margin-top: 1.5rem !important;
+  }
+}
+@media (max-width: 1250px) {
+  .form {
+    width: 80vw;
+  }
+}
+.form > h3 {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 3rem;
+  margin-inline: auto;
+}
+.form > .container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form > .container .input h4 {
+  cursor: default;
+  font-weight: 600;
+  transition: color 0.33s ease;
+}
+.form > .container .input input,
+.form > .container .input textarea {
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  width: 100%;
+  height: 4rem;
+  border-radius: 1.125rem;
+  background: rgba(255, 255, 255, 0.4);
+  color: #000;
+  border: none;
+  resize: none;
+  transition: background 0.33s ease, color 0.33s ease;
+}
+.form > .container .input input::-moz-placeholder, .form > .container .input textarea::-moz-placeholder {
+  opacity: 1;
+  font-family: inherit;
+  color: #3b3938;
+  -moz-transition: color 0.33s ease;
+  transition: color 0.33s ease;
+}
+.form > .container .input input::placeholder,
+.form > .container .input textarea::placeholder {
+  opacity: 1;
+  font-family: inherit;
+  color: #3b3938;
+  transition: color 0.33s ease;
+}
+.form > .container .input input::-webkit-outer-spin-button, .form > .container .input input::-webkit-inner-spin-button,
+.form > .container .input textarea::-webkit-outer-spin-button,
+.form > .container .input textarea::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form > .container .input input[type=number],
+.form > .container .input textarea[type=number] {
+  -moz-appearance: textfield;
+}
+.form > .container .input.content textarea {
+  font-family: inherit;
+  min-height: 16rem;
+  padding-top: 0.75rem;
+}
+.form > .container .input:hover h4, .form > .container .input:focus-within h4 {
+  color: #ee661a;
+}
+.form > .container .input:hover input,
+.form > .container .input:hover textarea, .form > .container .input:focus-within input,
+.form > .container .input:focus-within textarea {
+  outline: none;
+  background: #252525;
+  color: #fff;
+}
+.form > .container .input:hover input::-moz-placeholder, .form > .container .input:hover textarea::-moz-placeholder, .form > .container .input:focus-within input::-moz-placeholder, .form > .container .input:focus-within textarea::-moz-placeholder {
+  color: #9b9b9b;
+}
+.form > .container .input:hover input::placeholder,
+.form > .container .input:hover textarea::placeholder, .form > .container .input:focus-within input::placeholder,
+.form > .container .input:focus-within textarea::placeholder {
+  color: #9b9b9b;
+}
+.form > .container .input:hover input:focus-within,
+.form > .container .input:hover textarea:focus-within, .form > .container .input:focus-within input:focus-within,
+.form > .container .input:focus-within textarea:focus-within {
+  border: #fff 0.125rem solid;
+}
+.form > .container .submitting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.form > .container .submitting .agreements {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form > .container .submitting .agreements .agreement {
+  display: flex;
+  gap: 0.5rem;
+}
+.form > .container .submitting .agreements .agreement:hover, .form > .container .submitting .agreements .agreement:focus-within {
+  outline: none;
+}
+.form > .container .submitting .agreements .agreement:hover h6, .form > .container .submitting .agreements .agreement:focus-within h6 {
+  color: #ee661a;
+}
+.form > .container .submitting .agreements .agreement h6 {
+  cursor: pointer;
+  text-align: left;
+  font-weight: 400;
+  display: inline;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media (max-width: 450px) {
+  .form > .container .submitting .agreements .agreement h6 {
+    width: 12ch;
+  }
+}
+.form > .container .submitting .agreements .agreement input {
+  display: none;
+}
+.form > .container .submitting .agreements .agreement label {
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+.form > .container .submitting .agreements .agreement label.active {
+  background-image: url("../img/form-checkbox-checked.svg");
+}
+.form > .container .submitting .submit-btn {
+  background-image: url("../img/form-submit-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: #252525;
+  border-radius: 0.5625rem;
+  border: #ee661a 0.1875rem solid;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+.form > .container .submitting .submit-btn:hover, .form > .container .submitting .submit-btn:focus-within {
+  outline: none;
+  background-color: #ee661a;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.policy {
+  background: #252525;
+  color: #ee661a;
+  border-radius: 2.25rem;
+  width: 75vw;
+  padding: 2rem;
+}
+.policy p {
+  text-align: left;
+  margin: 0;
+}
+.policy button {
+  cursor: pointer;
+  display: block;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  font-family: inherit;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 600;
+  background: #ee661a;
+  color: #fff;
+  border: none;
+  border-radius: 2.25rem;
+  padding: 0.5rem 2.5rem;
+  transition: all 0.25s ease;
+}
+.policy button:hover, .policy button:focus-within {
+  outline: none;
+  filter: brightness(125%);
+}
+
+.modal-alert {
+  background: rgba(0, 0, 0, 0.75);
+  color: rgb(223, 23, 23);
+  font-weight: 600;
+  border: rgb(223, 23, 23) 0.25rem solid;
+  overflow: visible;
+  width: min(75vw, 56.25rem);
+  padding: clamp(1rem, 5vw, 4rem);
+}
+.modal-alert p {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+}
+.modal-alert img {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+  width: clamp(3rem, 5vw, 4rem);
+}/*# sourceMappingURL=form.css.map */

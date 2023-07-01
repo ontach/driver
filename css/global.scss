@@ -1,0 +1,564 @@
+//! Variables 🚗
+$blackPrimary: #000;
+$whitePrimary: #fff;
+$grayDarker: #2f2f2f;
+$grayPrimary: #252525;
+$grayLighter: #9e9e9e;
+$orangePrimary: #ee661a;
+
+$leadingPrimary: 0.03em;
+
+$borderRadiusFull: 500rem;
+$borderRadiusPrimary: 2.25rem;
+
+$font16: clamp(0.5rem, 3.5vw, 1rem);
+$font24: clamp(1rem, 3.5vw, 1.5rem);
+$font36: clamp(1.5rem, 3.5vw, 2.25rem);
+$font48: clamp(1.5rem, 3.5vw, 3rem);
+$font96: clamp(2.25rem, 10vw, 6rem);
+$font128: clamp(2.5rem, 10vw, 8rem);
+
+$sidePadding: clamp(2rem, 3vw, 8rem);
+
+//! Fonts 🚗
+@font-face {
+   // vvv Applies on default vvv
+   font-family: "Plus Jakarta Sans";
+   font-weight: 500;
+   src: url("../fonts/plusjakartasans-medium-webfont.woff2");
+}
+
+@font-face {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 300;
+   font-style: italic;
+   src: url("../fonts/plusjakartasans-lightitalic-webfont.woff2");
+}
+
+@font-face {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 300;
+   src: url("../fonts/plusjakartasans-light-webfont.woff2");
+}
+
+@font-face {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 400;
+   src: url("../fonts/plusjakartasans-regular-webfont.woff2");
+}
+
+@font-face {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 600;
+   src: url("../fonts/plusjakartasans-semibold-webfont.woff2");
+}
+
+@font-face {
+   font-family: "Plus Jakarta Sans";
+   font-weight: 700;
+   src: url("../fonts/plusjakartasans-bold-webfont.woff2");
+}
+
+//! Resets 🚗
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+* {
+   scrollbar-width: 0.5rem;
+   scrollbar-color: $orangePrimary transparent;
+}
+
+*::-webkit-scrollbar {
+   width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+   background-color: $orangePrimary;
+   border-radius: 1.25rem;
+   border: 0rem solid #ffffff;
+}
+
+*::selection {
+   background: rgba(238, 102, 26, 0.2);
+}
+
+*::-moz-selection {
+   background: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   overflow-x: hidden !important;
+   background: $grayDarker;
+   color: $whitePrimary;
+   font-family: "Plus Jakarta Sans";
+   letter-spacing: $leadingPrimary;
+   margin: 0;
+   padding: 0;
+
+   & > .wrapper {
+      overflow-x: hidden !important;
+   }
+}
+
+//! General 🚗
+section:not(#hero) {
+   position: relative;
+   padding-inline: $sidePadding;
+   margin-bottom: clamp(12rem, 5vw, 18rem);
+   min-height: 100vh;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+   color: $whitePrimary;
+
+   &:hover,
+   &:focus-within {
+      outline: none;
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+   text-align: center;
+}
+
+h1 {
+   font-size: $font128;
+   line-height: 10.0625rem;
+   transition: letter-spacing 0.5s ease;
+   margin-bottom: clamp(0rem, 5vw, 9rem);
+   cursor: default;
+
+   @media (min-width: 500px) {
+      &:hover,
+      &:focus-within {
+         letter-spacing: 0.12em;
+      }
+   }
+}
+
+h2 {
+   font-size: $font96;
+   line-height: 7.5625rem;
+}
+
+h3 {
+   font-size: $font48;
+   line-height: 3.75rem;
+}
+
+h4 {
+   font-size: $font36;
+   line-height: 2.8125rem;
+}
+
+h5 {
+   font-size: $font24;
+   line-height: 1.875rem;
+}
+
+h6 {
+   font-size: $font16;
+   line-height: 1.1875rem;
+}
+
+p {
+   font-size: $font36;
+   text-align: center;
+   line-height: 2.8125rem;
+}
+
+//! Mixins 🚗
+@mixin flexCenterBetween {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+@mixin flexCenterCenter {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+//! Navbar 🚗
+#navbar {
+   @include flexCenterBetween();
+
+   transform: translateY(0%);
+   position: fixed;
+   z-index: 100;
+   inset: 0;
+   width: 100vw;
+   height: 8rem;
+   background: rgba(0, 0, 0, 0.5);
+   padding-inline: $sidePadding;
+   transition: transform 0.25s ease;
+
+   img {
+      cursor: pointer;
+      width: clamp(12rem, 50vw, 16rem);
+   }
+
+   .nav-container {
+      display: flex;
+      gap: 2rem;
+   }
+
+   button {
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      width: 18.75rem;
+      height: 4rem;
+      text-align: center;
+      background: $grayDarker;
+      border-radius: $borderRadiusFull;
+      transition: background 0.25s ease;
+
+      &:focus-within,
+      &:hover {
+         background: $orangePrimary;
+         outline: none;
+      }
+
+      a {
+         display: block;
+         color: $whitePrimary;
+         font-weight: 600;
+         font-size: $font36;
+      }
+   }
+
+   .hamburger-menu-btn {
+      display: none;
+      position: relative;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      height: 2.25rem;
+      width: 2.5rem;
+      padding: 0;
+
+      & > span {
+         position: absolute;
+         display: block;
+         height: 0.33rem;
+         width: 2.5rem;
+         border-radius: $borderRadiusFull;
+         transform-origin: 0;
+         transition: all 0.33s;
+         background: $whitePrimary;
+
+         &:first-child {
+            top: 0;
+         }
+
+         &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+         }
+
+         &:last-child {
+            bottom: 0;
+         }
+      }
+
+      &.active > span:nth-child(2) {
+         inset: 50%;
+         transform: translate(-56%, -50%);
+         rotate: 45deg;
+      }
+
+      &.active > span:first-child,
+      &.active > span:last-child {
+         inset: 50%;
+         transform: translate(-44%, -50%);
+         rotate: -45deg;
+      }
+   }
+
+   @media (max-width: 1500px) {
+      .nav-container {
+         display: flex;
+         flex-direction: column;
+         position: absolute;
+         right: 0;
+         top: 8rem;
+         gap: 0;
+         transition: transform 0.75s cubic-bezier(0.21, 0.93, 0.64, 0.98);
+
+         button {
+            background: none;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 0;
+
+            a {
+               border-radius: 0;
+               background: linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.5),
+                  $orangePrimary
+               );
+               outline: $orangePrimary 0.125rem solid;
+               color: $orangePrimary;
+               padding-block: 1rem;
+               width: clamp(17.5rem, 50vw, 27.5rem);
+               text-align: right;
+               padding-right: $sidePadding;
+               transition: background-size 0.25s, color 0.25s;
+               background-size: 800% 800%;
+
+               &:hover,
+               &:focus-within {
+                  background-size: 100% 100%;
+                  color: $whitePrimary;
+               }
+            }
+         }
+      }
+
+      .nav-container:not(.active) {
+         transform: translateX(200%);
+      }
+
+      .nav-container.active {
+         transform: translateX(0);
+      }
+
+      .hamburger-menu-btn {
+         display: block;
+      }
+   }
+}
+
+// Navbar reveal trigger
+.navbar-trigger {
+   background: transparent;
+   width: 100vw;
+   height: 8rem;
+   position: fixed;
+   inset: 0;
+   z-index: 110;
+}
+
+.navbar-trigger:hover #navbar {
+   transform: translateY(0%) !important;
+}
+
+// Scroll to top navigation button
+.scroll-top-btn {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   z-index: 100;
+   width: 3rem;
+   height: 3rem;
+   padding: 0.75rem;
+   margin: $sidePadding;
+   background: $grayPrimary;
+   border-radius: $borderRadiusFull;
+   cursor: pointer;
+
+   & > img {
+      filter: saturate(0%) brightness(200%);
+      transition: filter 0.25s ease;
+   }
+
+   &:hover {
+      & > img {
+         filter: saturate(100%) brightness(100%);
+      }
+   }
+}
+
+//! Loading screen 🚗
+.loading {
+   inset: 0;
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background: $grayPrimary;
+   z-index: 200;
+   opacity: 0;
+   animation: 3s opacityNull ease;
+
+   @keyframes opacityNull {
+      0% {
+         opacity: 1;
+      }
+      75% {
+         opacity: 1;
+      }
+      100% {
+         opacity: 0;
+      }
+   }
+
+   & > .container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      .car {
+         width: clamp(8rem, 40vw, 16rem);
+         position: absolute;
+         top: 50%;
+         animation: riding 2s cubic-bezier(0.2, 0.73, 0.7, 0.16);
+         animation-delay: 500ms;
+         left: 100%;
+         transform: translateX(100%) translateY(-110%);
+
+         @keyframes riding {
+            0% {
+               left: 0;
+               transform: translateX(-100%) translateY(-110%);
+            }
+            100% {
+               left: 100%;
+               transform: translateX(100%) translateY(-110%);
+            }
+         }
+      }
+
+      .progress {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translateX(-50%) translateY(2.5rem);
+         background: $whitePrimary;
+         width: 25vw;
+         height: 0.25rem;
+         border-radius: $borderRadiusFull;
+         margin-inline: auto;
+
+         @media (max-width: 750px) {
+            & {
+               width: 50vw;
+            }
+         }
+
+         .percent-done {
+            transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+            -moz-transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+            -webkit-transition: all 2s cubic-bezier(0.7, 0.35, 0.44, 0.77);
+            background: $orangePrimary;
+            height: 100%;
+            width: 0%;
+         }
+      }
+   }
+}
+
+//! Footer section 🚗
+footer {
+   position: relative;
+   min-height: 32rem;
+   border: 6px solid;
+   border-image: linear-gradient($orangePrimary, rgba(238, 102, 26, 0.75)) 27;
+   background: $grayPrimary;
+
+   .gradient {
+      position: absolute;
+      background: linear-gradient(
+         180deg,
+         rgba(0, 0, 0, 0.25) 0%,
+         rgba(0, 0, 0, 0) 100%
+      );
+      transform: rotate(-180deg);
+      height: 100%;
+   }
+
+   img {
+      width: clamp(12rem, 50vw, 16rem);
+      position: absolute;
+      margin-inline: $sidePadding;
+      margin-block: 1rem;
+      cursor: pointer;
+   }
+
+   .container {
+      @include flexCenterCenter();
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      .links {
+         margin-inline: 5rem;
+
+         a {
+            display: block;
+            font-size: $font36;
+            margin-block: 0.5rem;
+            transition: letter-spacing 0.5s ease;
+         }
+
+         a:hover,
+         a:focus-within {
+            color: $orangePrimary;
+            letter-spacing: 0.09em;
+         }
+      }
+
+      .separator {
+         display: block;
+         background-color: $whitePrimary;
+         height: 16rem;
+         width: 0.25rem;
+      }
+   }
+
+   .disclaimer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin-inline: $sidePadding;
+      margin-block: 1rem;
+      color: rgba(255, 255, 255, 0.25);
+
+      h6 {
+         font-weight: 400;
+         text-align: right;
+      }
+   }
+
+   @media (max-width: 900px) {
+      .container {
+         flex-direction: column;
+
+         .links {
+            a {
+               text-align: center;
+               margin-block: 0;
+            }
+         }
+
+         .separator {
+            margin-block: 0.5rem;
+            height: 0.25rem;
+            width: 50vw;
+         }
+      }
+   }
+}
