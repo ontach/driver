@@ -428,6 +428,30 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
     width: -moz-fit-content;
     width: fit-content;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  #instructors .bg-img {
+    display: none;
+  }
+}
+@media (max-width: 1700px) {
+  #instructors > .container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+  #instructors .bg-img {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  #instructors > .container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+    width: -moz-fit-content;
+    width: fit-content;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
@@ -458,7 +482,7 @@
 }
 @media (min-width: 2496px) and (min-width: 3262px) {
   #instructors .bg-img {
-    height: 50vh;
+    height: 80vh;
     position: absolute;
     top: 0;
   }

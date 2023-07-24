@@ -552,6 +552,32 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
       & > .container {
          grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
          width: fit-content;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 0.5rem;
+      }
+
+      .bg-img {
+         display: none;
+      }
+   }
+
+   @media (max-width: 1700px) {
+      & > .container {
+         grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+         width: fit-content;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 0.5rem;
+      }
+
+      .bg-img {
+         display: none;
+      }
+   }
+
+   @media (max-width: 1200px) {
+      & > .container {
+         grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+         width: fit-content;
          grid-template-columns: repeat(2, 1fr);
          gap: 0.5rem;
       }
@@ -560,6 +586,7 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
          display: none;
       }
    }
+   
    @media (min-width: 1921px) {
       .bg-img {
          height: 150vh;
@@ -584,7 +611,7 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
       
       @media (min-width: 3262px) {
          .bg-img {
-            height: 50vh;
+            height: 80vh;
             position: absolute;
             top: 0;
          }
