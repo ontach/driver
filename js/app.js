@@ -159,3 +159,35 @@ document.onclick = function (e) {
       });
    }
 };
+
+//! ChangeText
+function ChangeText() {
+   const text = [
+       "<b>Michał</b> <i>+48 513 958 014</i>",
+       "<b>Waldek</b> <i>+48 574 925 335</i>",
+       "<b>Patryk</b> <i>+48 570 728 795</i>"
+   ];
+   let index = 0;
+   setInterval(function() {
+       document.getElementById('TextChange').innerHTML = text[index];
+       index = (index + 1) % text.length;
+   }, 10000);
+}
+
+ChangeText();
+
+//!ChangeText CTA
+function ChangeText() {
+   const text = [
+       "+48 513 958 014",
+       "+48 574 925 335",
+       "+48 570 728 795"
+   ];
+   let index = 0;
+   setInterval(function() {
+       document.getElementById('TextChangeCTA').innerHTML = text[index];
+       index = (index + 1) % text.length;
+   }, 10000);
+}
+
+ChangeText();

@@ -74,7 +74,7 @@
                <!-- Navigation buttons -->
                <div class="nav-container">
                   <button><a href="#about">O Nas </a></button>
-                  <button><a href="#license">Licencje </a></button>
+                  <button><a href="#license">Kursy </a></button>
                   <button><a href="#instructors">Instruktorzy </a></button>
                </div>
                <!-- Hamburger menu button -->
@@ -158,11 +158,13 @@
                      alt="Driver Szkoła Jazdy OSK emotka w sekcji O Nas #1"
                   />
                   <!-- Subtitle -->
-                  <h3>ATMOSFERA</h3>
+                  <h3>ATMOSFERA <br>I PROFESJONALIZM
+                  </h3>
                   <!-- Paragraph -->
                   <p>
-                     Ogromnym atutem naszego osrodka jest doświadczona i
-                     wykwalifikowana kadra instruktorow.
+                     Oferujemy kompleksowe kursy prawa jazdy z doskonałym wsparciem, możliwością jazd 
+                     doszkalających, życzliwą atmosferą i pomocą w 
+                     formalnościach.
                   </p>
                </div>
                <!-- #2 -->
@@ -191,7 +193,7 @@
                      alt="Driver Szkoła Jazdy OSK emotka w sekcji O Nas #3"
                   />
                   <!-- Subtitle -->
-                  <h3>PLAC JAZDY</h3>
+                  <h3>JAZDY <br>DOSZKALAJĄCE</h3>
                   <!-- Paragraph -->
                   <p>
                      Jazdy dodatkowe dla kursantów oraz osób spoza ośrodka na
@@ -213,11 +215,10 @@
                </div>
             </div>
             <!-- Side text -->
-            <h3>
-               +48 513 958 014<br />
-               szkoladriver@gmail.com<br />
-               Michał Koliński
-            </h3>
+            <h3><i>+48 513 958 014</i><br>
+            szkoladriver@gmail.com<br />
+            Michał Koliński</h3>
+            
             <!-- Background image -->
             <img
                loading="lazy"
@@ -238,46 +239,10 @@
             <!-- Background image -->
             <img loading="lazy" class="bg-img" src="img/license-bg.svg" />
             <!-- Title -->
-            <h1>LICENCJE</h1>
+            <h1>KURSY</h1>
             <!-- License container -->
             <div class="container">
-               <!-- #1 -->
-               <div class="license-div">
-                  <div class="flex">
-                     <!-- Subtitle -->
-                     <h3>A</h3>
-                     <!-- Show modal button -->
-                     <button type="button" onclick="showLicenseModal(1)">
-                        Info i cena
-                     </button>
-                  </div>
-                  <!-- Modal info window -->
-                  <dialog class="license-modal">
-                     <p>
-                        Licencja typu A w Polsce umożliwia prowadzenie
-                        motocykli. Wymaga ukończenia 24 lat i zdania egzaminów
-                        teoretycznego i praktycznego. Ograniczenie do motocykli
-                        o pojemności powyżej 125 cm³ przez 2 lata. Przepisy
-                        ruchu drogowego obowiązują, a wykroczenia mogą skutkować
-                        utratą uprawnień. Ważna 15 lat, po czym należy ją
-                        odnowić. <br> <b>CENA: 2700zł</b>
-                     </p>
-                     <button
-                        onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
-                     >
-                        Ok!
-                     </button>
-                  </dialog>
-                  <!-- Image -->
-                  <div class="img-container">
-                     <img
-                        loading="lazy"
-                        src="img/license1.png"
-                        alt="Licencja prawa jazdy kategoria kat. A | Zdjęcie pobrane od @viarprodesign na freepik.com"
-                     />
-                  </div>
-               </div>
-               <!-- #2  -->
+               <!-- #1  -->
                <div class="license-div">
                   <div class="flex">
                      <!-- Subtitle -->
@@ -290,14 +255,10 @@
                   <!-- Modal info window -->
                   <dialog class="license-modal">
                      <p>
-                        Licencja B w Polsce uprawnia do prowadzenia samochodów
-                        osobowych. Wymagane ukończenie 18 lat i zdanie egzaminów
-                        teoretycznego oraz praktycznego. Przestrzeganie
-                        przepisów ruchu drogowego jest obowiązkowe.
-                        Ograniczenia: brak prowadzenia ciężarówek i pojazdów z
-                        przyczepą, możliwość utraty uprawnień za poważne
-                        wykroczenia. Ważna przez określony czas, wymaga
-                        odnowienia. <br> <b>CENA: 3000zł</b>
+                        <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 18 lat<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br>  
+                        <br>  <b>CENA: 3000zł</b>
                      </p>
                      <button
                         onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
@@ -306,7 +267,7 @@
                      </button>
                   </dialog>
                   <!-- Image -->
-                  <div class="img-container">
+                  <div class="img-container" onclick="showLicenseModal(2)">
                      <img
                         loading="lazy"
                         src="img/license2.png"
@@ -314,62 +275,90 @@
                      />
                   </div>
                </div>
-               <!-- #3 -->
-               <div class="license-div">
-                  <div class="flex">
-                     <!-- Subtitle -->
-                     <h3>B+E</h3>
-                     <!-- Show modal button -->
-                     <button type="button" onclick="showLicenseModal(3)">
-                        Info i cena
-                     </button>
-                  </div>
-                  <!-- Modal info window -->
-                  <dialog class="license-modal">
-                     <p>
-                        Licencja B+E w Polsce umożliwia prowadzenie pojazdów
-                        osobowych z przyczepą. Wymagane ukończenie 18 lat,
-                        zdanie egzaminów teoretycznego i praktycznego dla
-                        kategorii B oraz dodatkowego egzaminu praktycznego dla
-                        kategorii E. Przestrzeganie przepisów ruchu drogowego
-                        jest obowiązkowe. Licencja ważna przez określony czas,
-                        wymaga odnowienia. <br> <b>CENA: 1500zł</b>
-                     </p>
-                     <button
-                        onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
-                     >
-                        Ok! B
-                     </button>
-                  </dialog>
-                  <!-- Image -->
-                  <div class="img-container">
-                     <img
-                        loading="lazy"
-                        src="img/license3.png"
-                        alt="Licencja prawa jazdy kategoria kat. B+E | Zdjęcie pobrane od @LipikStockMedia na freepik.com"
-                     />
-                  </div>
+
+              <!-- #2 -->
+              <div class="license-div">
+               <div class="flex">
+                  <!-- Subtitle -->
+                  <h3>B+E</h3>
+                  <!-- Show modal button -->
+                  <button type="button" onclick="showLicenseModal(3)">
+                     Info i cena
+                  </button>
                </div>
+               <!-- Modal info window -->
+               <dialog class="license-modal" >
+                  <p>
+                     <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 18 lat<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br>  
+                        <br>  <b>CENA: 1500zł</b>
+                  </p>
+                  <button
+                     onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
+                  >
+                     Ok!
+                  </button>
+               </dialog>
+               <!-- Image -->
+               <div class="img-container" onclick="showLicenseModal(3)">
+                  <img
+                     loading="lazy"
+                     src="img/license3.png"
+                     alt="Licencja prawa jazdy kategoria kat. B+E | Zdjęcie pobrane od @LipikStockMedia na freepik.com"
+                  />
+               </div>
+            </div>
+              <!-- #3 -->
+              <div class="license-div">
+               <div class="flex">
+                  <!-- Subtitle -->
+                  <h3>A</h3>
+                  <!-- Show modal button -->
+                  <button type="button" onclick="showLicenseModal(1)">
+                     Info i cena
+                  </button>
+               </div>
+               <!-- Modal info window -->
+               <dialog class="license-modal">
+                  <p>
+                     <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 20-24 lata<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br>  
+                        <br> <b>CENA: 2700zł</b>
+                  </p>
+                  <button
+                     onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
+                  >
+                     Ok!
+                  </button>
+               </dialog>
+               <!-- Image -->
+               <div class="img-container" onclick="showLicenseModal(1)">
+                  <img
+                     loading="lazy"
+                     src="img/license1.png"
+                     alt="Licencja prawa jazdy kategoria kat. A | Zdjęcie pobrane od @viarprodesign na freepik.com"
+                  />
+               </div>
+            </div>
                <!-- #4  -->
                <div class="license-div">
                   <div class="flex">
                      <!-- Subtitle -->
-                     <h3>AM</h3>
+                     <h3>A2</h3>
                      <!-- Show modal button -->
-                     <button type="button" onclick="showLicenseModal(4)">
+                     <button type="button" onclick="showLicenseModal(6)">
                         Info i cena
                      </button>
                   </div>
                   <!-- Modal info window -->
                   <dialog class="license-modal">
                      <p>
-                        Licencja AM w Polsce umożliwia prowadzenie skuterów i
-                        motocykli o pojemności do 50 cm³. Wymagane ukończenie 16
-                        lat i zdanie egzaminów teoretycznego oraz praktycznego.
-                        Przestrzeganie przepisów ruchu drogowego jest
-                        obowiązkowe. Licencja ważna przez określony czas, wymaga
-                        odnowienia. Ograniczenia: brak prowadzenia większych
-                        motocykli. <br> <b>CENA: 1000zł</b>
+                        <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 18 lat<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br> 
+                        <br> <b>CENA: 2500zł</b>
                      </p>
                      <button
                         onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
@@ -378,11 +367,11 @@
                      </button>
                   </dialog>
                   <!-- Image -->
-                  <div class="img-container">
+                  <div class="img-container" onclick="showLicenseModal(6)">
                      <img
                         loading="lazy"
-                        src="img/license4.png"
-                        alt="Licencja prawa jazdy kategoria kat. AM | Zdjęcie pobrane od @freepik na freepik.com"
+                        src="img/license6.png"
+                        alt="Licencja prawa jazdy kategoria kat. A2 | Zdjęcie pobrane od @serhii_bobyk na freepik.com"
                      />
                   </div>
                </div>
@@ -399,13 +388,10 @@
                   <!-- Modal info window -->
                   <dialog class="license-modal">
                      <p>
-                        Licencja A1 w Polsce umożliwia prowadzenie motocykli o
-                        pojemności do 125 cm³. Wymagane ukończenie 16 lat i
-                        zdanie egzaminów teoretycznego oraz praktycznego.
-                        Przestrzeganie przepisów ruchu drogowego jest
-                        obowiązkowe. Licencja ważna przez określony czas, wymaga
-                        odnowienia. Ograniczenia: brak prowadzenia innych
-                        kategorii motocykli. <br> <b>CENA: 2500zł</b>
+                        <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 16 lat<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br> 
+                        <br> <b>CENA: 2500zł</b>
                      </p>
                      <button
                         onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
@@ -414,7 +400,7 @@
                      </button>
                   </dialog>
                   <!-- Image -->
-                  <div class="img-container">
+                  <div class="img-container" onclick="showLicenseModal(5)">
                      <img
                         loading="lazy"
                         src="img/license5.png"
@@ -422,26 +408,24 @@
                      />
                   </div>
                </div>
+
                <!-- #6  -->
                <div class="license-div">
                   <div class="flex">
                      <!-- Subtitle -->
-                     <h3>A2</h3>
+                     <h3>AM</h3>
                      <!-- Show modal button -->
-                     <button type="button" onclick="showLicenseModal(6)">
+                     <button type="button" onclick="showLicenseModal(4)">
                         Info i cena
                      </button>
                   </div>
                   <!-- Modal info window -->
                   <dialog class="license-modal">
                      <p>
-                        Licencja A2 w Polsce umożliwia prowadzenie motocykli o
-                        mocy do 35 kW. Wymagane ukończenie 18 lat i zdanie
-                        egzaminów teoretycznego oraz praktycznego.
-                        Przestrzeganie przepisów ruchu drogowego jest
-                        obowiązkowe. Licencja ważna przez określony czas, wymaga
-                        odnowienia. Ograniczenia: brak prowadzenia motocykli o
-                        większej mocy. <br> <b>CENA: 2500zł</b>
+                        <b>WYMAGANIA</b><br>
+                        <b>WIEK:</b> 14 lat<br>
+                        <b>NASTĘPNY KURS:</b> (DATA KURSU)<br>
+                         <br> <b>CENA: 1000zł</b>
                      </p>
                      <button
                         onclick="document.querySelectorAll('.license-modal').forEach((element) => {element.close();})"
@@ -450,11 +434,11 @@
                      </button>
                   </dialog>
                   <!-- Image -->
-                  <div class="img-container">
+                  <div class="img-container" onclick="showLicenseModal(4)">
                      <img
                         loading="lazy"
-                        src="img/license6.png"
-                        alt="Licencja prawa jazdy kategoria kat. A2 | Zdjęcie pobrane od @serhii_bobyk na freepik.com"
+                        src="img/license4.png"
+                        alt="Licencja prawa jazdy kategoria kat. AM | Zdjęcie pobrane od @freepik na freepik.com"
                      />
                   </div>
                </div>
@@ -489,7 +473,8 @@
                         alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
                      />
                   </div>
-                  <h4>Łukasz</h4>
+                  <h4>Waldek</h4>
+                  <h5>+48 574 925 335</h5>
                </div>
                <!-- #2 -->
                <div class="instructors">
@@ -501,6 +486,7 @@
                      />
                   </div>
                   <h4>Michał Koliński</h4>
+                  <h5>+48 513 958 014</h5>
                </div>
                <!-- #3 -->
                <div class="instructors">
@@ -511,7 +497,8 @@
                         alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
                      />
                   </div>
-                  <h4>Marek</h4>
+                  <h4>Patryk</h4>
+                  <h5>+48 570 728 795</h5>
                </div>
                <!-- #4 -->
                <div class="instructors">
@@ -522,7 +509,7 @@
                         alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
                      />
                   </div>
-                  <h4>Anonimowy</h4>
+                  <h4>Tomek</h4>
                </div>
                <!-- #5 -->
                <div class="instructors">
@@ -533,7 +520,7 @@
                         alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
                      />
                   </div>
-                  <h4>Anonimowy</h4>
+                  <h4>Daria</h4>
                </div>
                <!-- #6 -->
                <div class="instructors">
@@ -544,7 +531,73 @@
                         alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
                      />
                   </div>
-                  <h4>Anonimowy</h4>
+                  <h4>Karolina</h4>
+               </div>
+               <!-- #7 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Marek</h4>
+               </div>
+               <!-- #8 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Patryk</h4>
+               </div>
+               <!-- #9 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Neuman</h4>
+               </div>
+               <!-- #10 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Jarek</h4>
+               </div>
+               <!-- #11 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Alicja</h4>
+               </div>
+               <!-- #12 -->
+               <div class="instructors">
+                  <div class="img-container">
+                     <img
+                        loading="lazy"
+                        src="img/instructor-icon.png"
+                        alt="Driver Instruktorzy Egzaminatorzy Zdjęcie | Zdjęcie pobrane od @vilmosvarga na freepik.com"
+                     />
+                  </div>
+                  <h4>Ślizgi</h4>
                </div>
             </div>
          </section>
@@ -564,7 +617,23 @@
                   <!-- Content wrapper -->
                   <div class="info">
                      <h3>szkoladriver@gmail.com</h3>
-                     <h3>+48 513 958 014</h3>
+                     <h3 id="TextChange"><b>Michał</b> <i>+48 513 958 014</i></h3>
+                     <script>
+                        function ChangeText() {
+                            const text = [
+                                "<b>Michał</b> <i>+48 513 958 014</i>",
+                                "<b>Waldek</b> <i>+48 574 925 335</i>",
+                                "<b>Patryk</b> <i>+48 570 728 795</i>"
+                            ];
+                            let index = 0;
+                            setInterval(function() {
+                                document.getElementById('TextChange').innerHTML = text[index];
+                                index = (index + 1) % text.length;
+                            }, 10000);
+                        }
+                    
+                        ChangeText();
+                    </script>
                      <h3>Długa 22, Kaliska</h3>
                   </div>
                   <!-- Icons wrapper -->

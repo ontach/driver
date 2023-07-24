@@ -152,7 +152,7 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
             scale: 0;
             transition-delay: 0.15s;
             transition: scale 0.5s cubic-bezier(0.7, -0.4, 0.23, 1.33);
-            margin-top: 6rem;
+            margin-top: 8rem;
          }
 
          & > img {
@@ -484,7 +484,7 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
 //! Instructors section 🚗
 #instructors {
    .bg-img {
-      height: 100vh;
+      height: 160vh;
       position: absolute;
       top: 0;
 
@@ -514,10 +514,12 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
             margin: 1rem auto 0rem;
             transition: color 0.25s ease;
          }
-
+         h5 {
+            transition: color 0.25s ease;
+         }
          &:hover,
          &:focus-within {
-            h4 {
+            h4, h5 {
                color: $orangePrimary;
             }
          }
@@ -549,10 +551,43 @@ $sidePadding: clamp(2rem, 3vw, 8rem);
    @media (max-width: 1800px) {
       & > .container {
          grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+         width: fit-content;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 0.5rem;
       }
 
       .bg-img {
          display: none;
+      }
+   }
+   @media (min-width: 1921px) {
+      .bg-img {
+         height: 150vh;
+         position: absolute;
+         top: 0;
+      }
+   }
+   @media (min-width: 2304px) {
+      .bg-img {
+         height: 135vh;
+         position: absolute;
+         top: 0;
+      }
+   }
+   
+   @media (min-width: 2496px) {
+      .bg-img {
+         height: 120vh;
+         position: absolute;
+         top: 0;
+      }
+      
+      @media (min-width: 3262px) {
+         .bg-img {
+            height: 50vh;
+            position: absolute;
+            top: 0;
+         }
       }
    }
 }

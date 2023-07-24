@@ -97,7 +97,7 @@
   scale: 0;
   transition-delay: 0.15s;
   transition: scale 0.5s cubic-bezier(0.7, -0.4, 0.23, 1.33);
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 #about .abt-container .abt-div > img {
   transition: top 0.3s ease;
@@ -375,7 +375,7 @@
 }
 
 #instructors .bg-img {
-  height: 100vh;
+  height: 160vh;
   position: absolute;
   top: 0;
 }
@@ -400,7 +400,10 @@
   margin: 1rem auto 0rem;
   transition: color 0.25s ease;
 }
-#instructors > .container .instructors:hover h4, #instructors > .container .instructors:focus-within h4 {
+#instructors > .container .instructors h5 {
+  transition: color 0.25s ease;
+}
+#instructors > .container .instructors:hover h4, #instructors > .container .instructors:hover h5, #instructors > .container .instructors:focus-within h4, #instructors > .container .instructors:focus-within h5 {
   color: #ee661a;
 }
 #instructors > .container .instructors:hover > .img-container img, #instructors > .container .instructors:focus-within > .img-container img {
@@ -423,9 +426,41 @@
 @media (max-width: 1800px) {
   #instructors > .container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 15rem));
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
   }
   #instructors .bg-img {
     display: none;
+  }
+}
+@media (min-width: 1921px) {
+  #instructors .bg-img {
+    height: 150vh;
+    position: absolute;
+    top: 0;
+  }
+}
+@media (min-width: 2304px) {
+  #instructors .bg-img {
+    height: 135vh;
+    position: absolute;
+    top: 0;
+  }
+}
+@media (min-width: 2496px) {
+  #instructors .bg-img {
+    height: 120vh;
+    position: absolute;
+    top: 0;
+  }
+}
+@media (min-width: 2496px) and (min-width: 3262px) {
+  #instructors .bg-img {
+    height: 50vh;
+    position: absolute;
+    top: 0;
   }
 }
 
